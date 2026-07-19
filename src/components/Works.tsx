@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, Heart } from "lucide-react";
+import { Play, Heart, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { works, Work } from "../data/content";
 
@@ -64,10 +64,16 @@ export default function Works() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {filteredWorks.map((work, index) => (
-              <div
+            {filteredWorks.map((work, index) => {
+              const CardWrapper = work.link ? "a" : "div";
+              const cardProps = work.link
+                ? { href: work.link, target: "_blank", rel: "noopener noreferrer" }
+                : {};
+              return (
+              <CardWrapper
                 key={work.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2"
+                {...cardProps}
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 block"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative aspect-square overflow-hidden">
@@ -83,6 +89,13 @@ export default function Works() {
                       <Play className="text-gold-600 ml-1" size={28} fill="currentColor" />
                     </div>
                   </div>
+                  {work.link && (
+                    <div className="absolute top-4 right-4">
+                      <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-md">
+                        <ExternalLink className="text-gold-600" size={14} />
+                      </div>
+                    </div>
+                  )}
                   <div className="absolute top-4 left-4">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(
@@ -94,8 +107,9 @@ export default function Works() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-2 group-hover:text-gold-700 transition-colors">
+                  <h3 className="font-serif text-xl font-bold text-gray-900 mb-2 group-hover:text-gold-700 transition-colors flex items-center gap-2">
                     {work.title}
+                    {work.link && <ExternalLink size={14} className="text-gold-500" />}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {work.description}
@@ -105,13 +119,13 @@ export default function Works() {
                       <Heart size={16} className="text-rose-400" />
                       热门推荐
                     </span>
-                    <span className="text-gold-600 font-medium group-hover:underline cursor-pointer">
-                      查看详情 →
+                    <span className="text-gold-600 font-medium group-hover:underline cursor-pointer inline-flex items-center gap-1">
+                      {work.link ? "观看视频" : "查看详情"} {work.link ? <ExternalLink size={12} /> : "→"}
                     </span>
                   </div>
                 </div>
-              </div>
-            ))}
+              </CardWrapper>
+            )})}
           </div>
         </div>
       </div>
