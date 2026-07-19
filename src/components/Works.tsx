@@ -5,9 +5,19 @@ import { works, Work } from "../data/content";
 
 const categories = ["全部", "心灵鸡汤", "武汉故事", "美食探店"] as const;
 
+const fallbackImages: Record<number, string> = {
+  1: "/images/work-1-zaoan.svg",
+  2: "/images/work-2-jiqingjie.svg",
+  3: "/images/work-3-reganmian.svg",
+  4: "/images/work-4-huoguo1.svg",
+  5: "/images/work-5-outang.svg",
+  6: "/images/work-6-huoguo2.svg",
+};
+
 export default function Works() {
   const { ref, isVisible } = useScrollAnimation();
   const [activeCategory, setActiveCategory] = useState<string>("全部");
+  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
   const filteredWorks =
     activeCategory === "全部"
@@ -25,6 +35,17 @@ export default function Works() {
       default:
         return "bg-gray-100 text-gray-700";
     }
+  };
+
+  const handleImageError = (workId: number) => {
+    setImageErrors((prev) => new Set(prev).add(workId));
+  };
+
+  const getImageSrc = (work: Work) => {
+    if (imageErrors.has(work.id)) {
+      return fallbackImages[work.id] || work.image;
+    }
+    return work.image;
   };
 
   return (
@@ -78,9 +99,10 @@ export default function Works() {
               >
                 <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gold-100 to-gold-200">
                   <img
-                    src={work.image}
+                    src={getImageSrc(work)}
                     alt={work.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    onError={() => handleImageError(work.id)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
