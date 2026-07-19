@@ -15,16 +15,6 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-hero"></div>
-
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `url("https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Wuhan%20city%20skyline%20at%20night%20with%20Yangtze%20River%20bridge%2C%20lights%20reflection%2C%20panoramic%20view%2C%20cinematic%20photography%2C%20wide%20angle&image_size=landscape_16_9")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
-
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gold-900/50"></div>
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">

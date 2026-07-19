@@ -45,32 +45,28 @@ export const works: Work[] = [
     title: "早安武汉",
     category: "心灵鸡汤",
     description: "每天清晨，波哥用温暖的声音唤醒武汉，分享人生感悟，传递正能量。",
-    image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=beautiful%20sunrise%20over%20river%20city%2C%20golden%20light&image_size=square",
+    image: "/images/work-1-zaoan.svg",
   },
   {
     id: 2,
     title: "吉庆街的烟火气",
     category: "武汉故事",
     description: "探寻百年吉庆街的前世今生，记录老武汉的市井生活与人间烟火。",
-    image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20street%20food%20market%20at%20night%2C%20neon%20lights&image_size=square",
+    image: "/images/work-2-jiqingjie.svg",
   },
   {
     id: 3,
     title: "热干面的秘密",
     category: "美食探店",
     description: "走遍武汉三镇，寻找最地道的热干面，解密芝麻酱的黄金比例。",
-    image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wuhan%20hot%20dry%20noodles%20in%20bowl%2C%20sesame%20paste&image_size=square",
+    image: "/images/work-3-reganmian.svg",
   },
   {
     id: 4,
     title: "茶馆里的山城火锅",
     category: "美食探店",
     description: "大热天能够出门的那都是胃口，还能够一起涮火锅的，那绝对是实打实的真爱！和江涛老师围着热火锅边吃边聊，氛围感拉满，高温天的相聚简单又治愈。",
-    image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=spicy%20sichuan%20hotpot%20on%20table%2C%20steam%20rising&image_size=square",
+    image: "/images/work-4-huoguo1.svg",
     link: "https://v.douyin.com/DWRSnAhlxSY/",
   },
   {
@@ -78,8 +74,7 @@ export const works: Work[] = [
     title: "藕汤印象",
     category: "美食探店",
     description: "happy波带你藕汤印象，藕汤印象这几年发展势头超猛，地道湖北藕汤，粉糯莲藕配浓郁骨汤，暖心暖胃，就是湖北人家的味道。",
-    image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=lotus%20root%20soup%20in%20clay%20pot%2C%20chinese%20food&image_size=square",
+    image: "/images/work-5-outang.svg",
     link: "https://v.douyin.com/rtBr2v21bXw/",
   },
   {
@@ -87,8 +82,7 @@ export const works: Work[] = [
     title: "满天星太珍火锅",
     category: "美食探店",
     description: "happy波带你满天星太珍火锅，徐总约我打卡太珍火锅，正宗老武汉火锅味道，麻辣鲜香，越煮越有味，满天星光下吃火锅氛围感拉满。",
-    image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=spicy%20chinese%20hotpot%2C%20red%20oil%2C%20restaurant&image_size=square",
+    image: "/images/work-6-huoguo2.svg",
     link: "https://v.douyin.com/7PAQ8KSUGNw/",
   },
 ];
