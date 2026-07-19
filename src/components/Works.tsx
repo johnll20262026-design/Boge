@@ -76,12 +76,15 @@ export default function Works() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all duration-500 hover:-translate-y-2 block"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gold-100 to-gold-200">
                   <img
                     src={work.image}
                     alt={work.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

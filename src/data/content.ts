@@ -46,7 +46,7 @@ export const works: Work[] = [
     category: "心灵鸡汤",
     description: "每天清晨，波哥用温暖的声音唤醒武汉，分享人生感悟，传递正能量。",
     image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=warm%20morning%20sunrise%20over%20Wuhan%20Yangtze%20River%20bridge%2C%20golden%20light%20reflecting%20on%20water%2C%20city%20skyline%20silhouette%2C%20new%20day%20begins%2C%20hopeful%20atmosphere%2C%20beautiful%20landscape%20photography%2C%20peaceful%20morning%2C%20no%20people&image_size=square",
+      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=beautiful%20sunrise%20over%20river%20city%2C%20golden%20light&image_size=square",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ export const works: Work[] = [
     category: "武汉故事",
     description: "探寻百年吉庆街的前世今生，记录老武汉的市井生活与人间烟火。",
     image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20Wuhan%20Jiqing%20Street%20food%20market%20at%20night%2C%20neon%20lights%2C%20street%20food%20stalls%20with%20hot%20pot%20and%20skewers%2C%20food%20close%20ups%2C%20vibrant%20atmosphere%2C%20documentary%20photography%2C%20Wuhan%20nightlife%2C%20street%20scenes%2C%20no%20people%20faces%2C%20food%20only&image_size=square",
+      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=chinese%20street%20food%20market%20at%20night%2C%20neon%20lights&image_size=square",
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ export const works: Work[] = [
     category: "美食探店",
     description: "走遍武汉三镇，寻找最地道的热干面，解密芝麻酱的黄金比例。",
     image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=delicious%20bowl%20of%20Wuhan%20hot%20dry%20noodles%20reganmian%2C%20sesame%20paste%20coating%20noodles%2C%20chopsticks%20on%20side%2C%20chopped%20scallions%2C%20pickled%20vegetables%2C%20traditional%20Wuhan%20breakfast%20on%20wooden%20table%2C%20warm%20morning%20light%2C%20food%20photography%2C%20no%20people%2C%20no%20face&image_size=square",
+      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wuhan%20hot%20dry%20noodles%20in%20bowl%2C%20sesame%20paste&image_size=square",
   },
   {
     id: 4,
@@ -70,7 +70,7 @@ export const works: Work[] = [
     category: "美食探店",
     description: "大热天能够出门的那都是胃口，还能够一起涮火锅的，那绝对是实打实的真爱！和江涛老师围着热火锅边吃边聊，氛围感拉满，高温天的相聚简单又治愈。",
     image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20Chinese%20teahouse%20with%20spicy%20Sichuan%20hotpot%20on%20wooden%20table%2C%20red%20chili%20oil%20boiling%2C%20steam%20rising%2C%20cozy%20warm%20atmosphere%2C%20traditional%20Chinese%20decor%2C%20delicious%20food%20photography%2C%20no%20people%2C%20close%20up%20hotpot%2C%20chopsticks%2C%20side%20dishes&image_size=square",
+      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=spicy%20sichuan%20hotpot%20on%20table%2C%20steam%20rising&image_size=square",
     link: "https://v.douyin.com/DWRSnAhlxSY/",
   },
   {
@@ -79,7 +79,7 @@ export const works: Work[] = [
     category: "美食探店",
     description: "happy波带你藕汤印象，藕汤印象这几年发展势头超猛，地道湖北藕汤，粉糯莲藕配浓郁骨汤，暖心暖胃，就是湖北人家的味道。",
     image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20Hubei%20lotus%20root%20soup%20in%20clay%20pot%2C%20pink%20tender%20lotus%20root%20slices%2C%20rich%20pork%20bone%20broth%2C%20steam%20rising%2C%20cozy%20restaurant%20setting%2C%20Chinese%20ceramic%20soup%20spoon%2C%20delicious%20comfort%20food%2C%20food%20photography%2C%20no%20people%2C%20close%20up%20soup&image_size=square",
+      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=lotus%20root%20soup%20in%20clay%20pot%2C%20chinese%20food&image_size=square",
     link: "https://v.douyin.com/rtBr2v21bXw/",
   },
   {
@@ -88,7 +88,7 @@ export const works: Work[] = [
     category: "美食探店",
     description: "happy波带你满天星太珍火锅，徐总约我打卡太珍火锅，正宗老武汉火锅味道，麻辣鲜香，越煮越有味，满天星光下吃火锅氛围感拉满。",
     image:
-      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=authentic%20Wuhan%20style%20spicy%20hotpot%20in%20traditional%20restaurant%2C%20red%20chili%20oil%20boiling%2C%20sliced%20meat%20and%20vegetables%20on%20table%2C%20warm%20ambient%20lighting%2C%20cozy%20dinner%20atmosphere%2C%20delicious%20Chinese%20hotpot%2C%20food%20photography%2C%20no%20people%2C%20close%20up%20hotpot&image_size=square",
+      "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=spicy%20chinese%20hotpot%2C%20red%20oil%2C%20restaurant&image_size=square",
     link: "https://v.douyin.com/7PAQ8KSUGNw/",
   },
 ];
