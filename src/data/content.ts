@@ -45,7 +45,7 @@ export const works: Work[] = [
     title: "牛伢狗面馆",
     category: "美食探店",
     description: "happy波带你牛伢狗面馆，江岸后湖挖到宝藏老牌面馆，地道武汉味，面条筋道汤底浓郁，值得打卡！",
-    image: "https://aka.doubaocdn.com/s/2SJ31woPM6",
+    image: "/images/work-1-niuyagou.jpg",
     link: "https://v.douyin.com/r9IlcMXmOCU/",
   },
   {
@@ -53,7 +53,7 @@ export const works: Work[] = [
     title: "毛大佑汉派烤虾球",
     category: "美食探店",
     description: "happy波带你毛大佑汉派烤虾球，别被名字骗了！地道汉派烧烤，烤虾球外焦里嫩，下酒神器！",
-    image: "https://aka.doubaocdn.com/s/cvfU1woPML",
+    image: "/images/work-2-shrimp.jpg",
     link: "https://v.douyin.com/-piF6YdkmSA/",
   },
   {
@@ -61,7 +61,7 @@ export const works: Work[] = [
     title: "郑满意火锅",
     category: "美食探店",
     description: "happy波带你郑满意火锅，到光谷不打卡光谷排队王等于白来！正宗火锅味道，人气爆棚！",
-    image: "https://aka.doubaocdn.com/s/AZQ01woPMN",
+    image: "/images/work-3-zhengmanyi.jpg",
     link: "https://v.douyin.com/33Ohfc-g7fw/",
   },
   {
