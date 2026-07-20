@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play, Heart, ExternalLink, Loader2 } from "lucide-react";
+import { Play, Heart, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { works, Work } from "../data/content";
 
@@ -8,8 +8,6 @@ const categories = ["全部", "美食探店"] as const;
 export default function Works() {
   const { ref, isVisible } = useScrollAnimation();
   const [activeCategory, setActiveCategory] = useState<string>("全部");
-  const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
-  const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
 
   const filteredWorks =
     activeCategory === "全部"
@@ -27,19 +25,6 @@ export default function Works() {
       default:
         return "bg-gray-100 text-gray-700";
     }
-  };
-
-  const handleImageLoad = (workId: number) => {
-    setLoadedImages((prev) => new Set(prev).add(workId));
-    setImageErrors((prev) => {
-      const next = new Set(prev);
-      next.delete(workId);
-      return next;
-    });
-  };
-
-  const handleImageError = (workId: number) => {
-    setImageErrors((prev) => new Set(prev).add(workId));
   };
 
   return (
@@ -84,8 +69,6 @@ export default function Works() {
               const cardProps = work.link
                 ? { href: work.link, target: "_blank", rel: "noopener noreferrer" }
                 : {};
-              const hasError = imageErrors.has(work.id);
-              const isLoaded = loadedImages.has(work.id);
               return (
               <CardWrapper
                 key={work.id}
@@ -94,44 +77,25 @@ export default function Works() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gold-100 to-gold-200">
-                  {!isLoaded && !hasError && (
-                    <div className="absolute inset-0 flex items-center justify-center z-10">
-                      <div className="flex flex-col items-center gap-2 text-gold-600">
-                        <Loader2 size={32} className="animate-spin" />
-                        <span className="text-sm">美食图片加载中...</span>
-                      </div>
-                    </div>
-                  )}
-                  {hasError ? (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gold-50 to-amber-100">
-                      <div className="text-gold-700 text-center px-6">
-                        <div className="text-4xl mb-2">🍜</div>
-                        <div className="font-serif text-xl font-bold">{work.title}</div>
-                      </div>
-                    </div>
-                  ) : (
-                    <img
-                      src={work.image}
-                      alt={work.title}
-                      className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-110 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-                      onLoad={() => handleImageLoad(work.id)}
-                      onError={() => handleImageError(work.id)}
-                    />
-                  )}
+                  <img
+                    src={work.image}
+                    alt={work.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
                       <Play className="text-gold-600 ml-1" size={28} fill="currentColor" />
                     </div>
                   </div>
-                  {work.link && !hasError && (
-                    <div className="absolute top-4 right-4 z-20">
+                  {work.link && (
+                    <div className="absolute top-4 right-4">
                       <div className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-md">
                         <ExternalLink className="text-gold-600" size={14} />
                       </div>
                     </div>
                   )}
-                  <div className="absolute top-4 left-4 z-20">
+                  <div className="absolute top-4 left-4">
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(
                         work.category
