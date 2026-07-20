@@ -3,7 +3,7 @@ import { Play, Heart, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { works, Work } from "../data/content";
 
-const categories = ["全部", "心灵鸡汤", "武汉故事", "美食探店"] as const;
+const categories = ["全部", "美食探店"] as const;
 
 const fallbackImages: Record<number, string> = {
   1: "/images/work-1-zaoan.svg",

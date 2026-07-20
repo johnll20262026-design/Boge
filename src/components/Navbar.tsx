@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "首页", href: "#home", external: false },
@@ -67,14 +67,13 @@ export default function Navbar() {
               }}
               target={link.external ? "_blank" : undefined}
               rel={link.external ? "noopener noreferrer" : undefined}
-              className={`text-sm font-medium transition-all duration-300 hover:scale-105 inline-flex items-center gap-1 ${
+              className={`text-sm font-medium transition-all duration-300 hover:scale-105 inline-flex items-center ${
                 isScrolled
                   ? "text-gray-700 hover:text-gold-600"
                   : "text-white/90 hover:text-gold-300"
               } ${link.external ? "text-gold-600" : ""}`}
             >
               {link.label}
-              {link.external && <ExternalLink size={12} />}
             </a>
           ))}
         </div>
@@ -104,7 +103,6 @@ export default function Navbar() {
               className="flex items-center justify-between px-6 py-4 text-gray-700 hover:bg-gold-50 hover:text-gold-700 transition-colors border-b border-gold-100 last:border-0"
             >
               <span>{link.label}</span>
-              {link.external && <ExternalLink size={14} className="text-gold-500" />}
             </a>
           ))}
         </div>

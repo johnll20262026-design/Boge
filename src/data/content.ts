@@ -50,10 +50,11 @@ export const works: Work[] = [
   },
   {
     id: 2,
-    title: "吉庆街的烟火气",
-    category: "武汉故事",
-    description: "探寻百年吉庆街的前世今生，记录老武汉的市井生活与人间烟火。",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Traditional%20Chinese%20street%20food%20night%20market%2C%20red%20lanterns%20glowing%2C%20delicious%20food%20stalls%20with%20steam%20rising%2C%20Wuhan%20Jiqing%20Street%20atmosphere%2C%20warm%20cozy%20lighting%2C%20appetizing%20street%20food%2C%20cinematic%20food%20photography%2C%20no%20people%2C%20high%20quality&image_size=square_hd",
+    title: "毛大佑汉派烤虾球",
+    category: "美食探店",
+    description: "happy波带你毛大佑汉派烤虾球，别被名字骗了！地道汉派烧烤，烤虾球外焦里嫩，下酒神器！",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Wuhan%20style%20grilled%20shrimp%20balls%20skewers%2C%20delicious%20Chinese%20BBQ%2C%20spicy%20seasoning%2C%20charcoal%20grilled%2C%20appetizing%20food%20photography%2C%20warm%20lighting%2C%20street%20food%2C%20no%20people%2C%20high%20quality%2C%20delicious&image_size=square_hd",
+    link: "https://v.douyin.com/-piF6YdkmSA/",
   },
   {
     id: 3,

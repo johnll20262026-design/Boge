@@ -1,4 +1,4 @@
-import { Heart, ArrowUp, ExternalLink } from "lucide-react";
+import { Heart, ArrowUp } from "lucide-react";
 import { personalInfo } from "../data/content";
 
 export default function Footer() {
@@ -74,10 +74,9 @@ export default function Footer() {
               href="https://ai-tools-guide-ar8.pages.dev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold-200 hover:text-white transition-colors inline-flex items-center gap-1"
+              className="text-gold-200 hover:text-white transition-colors"
             >
               技术支持
-              <ExternalLink size={12} />
             </a>
           </div>
 

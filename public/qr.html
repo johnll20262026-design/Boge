@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>波哥官网 - 二维码</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Noto Sans SC", system-ui, sans-serif;
+      background: linear-gradient(135deg, #78350f 0%, #92400e 30%, #b45309 60%, #d97706 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 25px 80px -20px rgba(0,0,0,0.4);
+      max-width: 400px;
+    }
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      color: #78350f;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #92400e;
+      margin-bottom: 24px;
+    }
+    .qr-wrapper {
+      display: inline-block;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      border: 3px solid #fbbf24;
+      box-shadow: 0 10px 30px rgba(217, 119, 6, 0.2);
+    }
+    .qr-wrapper svg {
+      display: block;
+    }
+    .hint {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #b45309;
+    }
+    .btn {
+      margin-top: 16px;
+      background: linear-gradient(135deg, #92400e 0%, #d97706 100%);
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { QRCodeSVG } = window;
+
+    function App() {
+      const siteUrl = "https://boge.pages.dev";
+      
+      const downloadQR = () => {
+        const svg = document.querySelector('.qr-wrapper svg');
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        img.onload = () => {
+          canvas.width = 600;
+          canvas.height = 600;
+          ctx.fillStyle = 'white';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, 600, 600);
+          const pngFile = canvas.toDataURL('image/png');
+          const downloadLink = document.createElement('a');
+          downloadLink.download = '波哥官网二维码.png';
+          downloadLink.href = pngFile;
+          downloadLink.click();
+        };
+        img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
+      };
+
+      return (
+        <div className="container">
+          <h1>波哥官网</h1>
+          <p>扫码访问波哥的精彩世界</p>
+          <div className="qr-wrapper">
+            <QRCodeSVG
+              value={siteUrl}
+              size={280}
+              level="H"
+              fgColor="#78350f"
+              bgColor="#ffffff"
+              imageSettings={{
+                src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fbbf24'/%3E%3Cstop offset='100%25' style='stop-color:%23b45309'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Ccircle cx='50' cy='50' r='42' fill='%23fef3c7'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia, serif' font-size='48' font-weight='bold' fill='%2378350f'%3E波%3C/text%3E%3C/svg%3E",
+                height: 70,
+                width: 70,
+                excavate: true,
+              }}
+            />
+          </div>
+          <p className="hint">右键点击二维码图片可直接保存</p>
+          <button className="btn" onClick={downloadQR}>下载二维码图片</button>
+        </div>
+      );
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/qrcode.react@3.1.0/umd/qrcode.react.production.min.js';
+    script.onload = () => {
+      ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    };
+    document.head.appendChild(script);
+  </script>
+</body>
+</html>
