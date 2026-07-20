@@ -6,9 +6,9 @@ import { works, Work } from "../data/content";
 const categories = ["全部", "美食探店"] as const;
 
 const fallbackImages: Record<number, string> = {
-  1: "/images/work-1-zaoan.svg",
-  2: "/images/work-2-jiqingjie.svg",
-  3: "/images/work-3-reganmian.svg",
+  1: "/images/work-1-niuyagou.svg",
+  2: "/images/work-2-shrimp.svg",
+  3: "/images/work-3-zhengmanyi.svg",
   4: "/images/work-4-huoguo1.svg",
   5: "/images/work-5-outang.svg",
   6: "/images/work-6-huoguo2.svg",

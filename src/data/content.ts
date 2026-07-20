@@ -45,7 +45,7 @@ export const works: Work[] = [
     title: "牛伢狗面馆",
     category: "美食探店",
     description: "happy波带你牛伢狗面馆，江岸后湖挖到宝藏老牌面馆，地道武汉味，面条筋道汤底浓郁，值得打卡！",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Wuhan%20famous%20beef%20noodle%20shop%20close%20up%2C%20delicious%20noodles%20in%20rich%20broth%2C%20beef%20slices%2C%20chopsticks%2C%20steaming%20hot%2C%20traditional%20Chinese%20noodle%20restaurant%2C%20appetizing%20food%20photography%2C%20warm%20lighting%2C%20no%20people%2C%20high%20quality&image_size=square_hd",
+    image: "/images/work-1-niuyagou.svg",
     link: "https://v.douyin.com/r9IlcMXmOCU/",
   },
   {
@@ -53,7 +53,7 @@ export const works: Work[] = [
     title: "毛大佑汉派烤虾球",
     category: "美食探店",
     description: "happy波带你毛大佑汉派烤虾球，别被名字骗了！地道汉派烧烤，烤虾球外焦里嫩，下酒神器！",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Wuhan%20style%20grilled%20shrimp%20balls%20skewers%2C%20delicious%20Chinese%20BBQ%2C%20spicy%20seasoning%2C%20charcoal%20grilled%2C%20appetizing%20food%20photography%2C%20warm%20lighting%2C%20street%20food%2C%20no%20people%2C%20high%20quality%2C%20delicious&image_size=square_hd",
+    image: "/images/work-2-shrimp.svg",
     link: "https://v.douyin.com/-piF6YdkmSA/",
   },
   {
@@ -61,7 +61,7 @@ export const works: Work[] = [
     title: "郑满意火锅",
     category: "美食探店",
     description: "happy波带你郑满意火锅，到光谷不打卡光谷排队王等于白来！正宗火锅味道，人气爆棚！",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Popular%20Wuhan%20hot%20pot%20restaurant%20in%20Guanggu%2C%20spicy%20red%20broth%2C%20fresh%20ingredients%2C%20cozy%20restaurant%20atmosphere%2C%20delicious%20food%20spread%2C%20professional%20food%20photography%2C%20steaming%20hot%2C%20warm%20lighting%2C%20no%20people%2C%20high%20quality&image_size=square_hd",
+    image: "/images/work-3-zhengmanyi.svg",
     link: "https://v.douyin.com/33Ohfc-g7fw/",
   },
   {
