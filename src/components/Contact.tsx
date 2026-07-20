@@ -1,18 +1,31 @@
-import { Phone, MapPin, MessageCircle, QrCode } from "lucide-react";
+import { useState } from "react";
+import { Phone, MapPin, MessageCircle, Check, QrCode } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { personalInfo } from "../data/content";
+import { QRCodeSVG } from "qrcode.react";
 
 export default function Contact() {
   const { ref, isVisible } = useScrollAnimation();
+  const [copiedText, setCopiedText] = useState<string | null>(null);
 
   const copyToClipboard = (text: string, label: string) => {
     navigator.clipboard.writeText(text).then(() => {
-      alert(`${label}已复制：${text}`);
+      setCopiedText(label);
+      setTimeout(() => setCopiedText(null), 2000);
     });
   };
 
+  const siteUrl = typeof window !== "undefined" ? window.location.origin : "https://boge.pages.dev";
+
   return (
-    <section id="contact" className="py-24 bg-cream-50">
+    <section id="contact" className="py-24 bg-cream-50 relative">
+      {copiedText && (
+        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-gold-600 text-white px-6 py-3 rounded-full shadow-gold-lg flex items-center gap-2 animate-fade-in-down">
+          <Check size={20} />
+          <span className="font-medium">{copiedText}已复制！</span>
+        </div>
+      )}
+
       <div className="container mx-auto px-4">
         <div
           ref={ref}
@@ -80,14 +93,36 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="mt-10 bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
-                  <div className="flex items-center justify-center gap-2 text-white/80 mb-2">
-                    <QrCode size={20} />
-                    <span>添加微信请备注"合作咨询"</span>
+                <div className="mt-10 bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div className="bg-white p-3 rounded-2xl shadow-lg relative">
+                      <QRCodeSVG
+                        value={siteUrl}
+                        size={160}
+                        level="H"
+                        fgColor="#78350f"
+                        bgColor="#ffffff"
+                        imageSettings={{
+                          src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23fbbf24'/%3E%3Cstop offset='100%25' style='stop-color:%23b45309'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='30' cy='30' r='28' fill='url(%23g)'/%3E%3Ccircle cx='30' cy='30' r='24' fill='%23fef3c7'/%3E%3Ctext x='30' y='40' text-anchor='middle' font-family='Georgia, serif' font-size='28' font-weight='bold' fill='%2378350f'%3E波%3C/text%3E%3C/svg%3E",
+                          height: 40,
+                          width: 40,
+                          excavate: true,
+                        }}
+                      />
+                    </div>
+                    <div className="text-center md:text-left">
+                      <div className="flex items-center justify-center md:justify-start gap-2 text-white mb-2">
+                        <QrCode size={20} />
+                        <span className="font-medium text-lg">扫码访问波哥官网</span>
+                      </div>
+                      <p className="text-gold-200 text-sm mb-2">
+                        扫描二维码，查看波哥更多精彩作品
+                      </p>
+                      <p className="text-white/70 text-xs">
+                        添加微信请备注"合作咨询"
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-gold-200 text-sm">
-                    期待与您携手，共创精彩
-                  </p>
                 </div>
               </div>
             </div>

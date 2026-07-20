@@ -42,10 +42,11 @@ export const personalInfo = {
 export const works: Work[] = [
   {
     id: 1,
-    title: "早安武汉",
-    category: "心灵鸡汤",
-    description: "每天清晨，波哥用温暖的声音唤醒武汉，分享人生感悟，传递正能量。",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Golden%20sunrise%20over%20Wuhan%20Yangtze%20River%20city%20skyline%2C%20warm%20orange%20morning%20light%2C%20beautiful%20bridge%20silhouette%2C%20peaceful%20river%2C%20cinematic%20photography%2C%20professional%20landscape%2C%20no%20people%2C%20high%20quality%2C%208k%2C%20warm%20tones&image_size=square_hd",
+    title: "牛伢狗面馆",
+    category: "美食探店",
+    description: "happy波带你牛伢狗面馆，江岸后湖挖到宝藏老牌面馆，地道武汉味，面条筋道汤底浓郁，值得打卡！",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Wuhan%20famous%20beef%20noodle%20shop%20close%20up%2C%20delicious%20noodles%20in%20rich%20broth%2C%20beef%20slices%2C%20chopsticks%2C%20steaming%20hot%2C%20traditional%20Chinese%20noodle%20restaurant%2C%20appetizing%20food%20photography%2C%20warm%20lighting%2C%20no%20people%2C%20high%20quality&image_size=square_hd",
+    link: "https://v.douyin.com/r9IlcMXmOCU/",
   },
   {
     id: 2,
@@ -56,10 +57,11 @@ export const works: Work[] = [
   },
   {
     id: 3,
-    title: "热干面的秘密",
+    title: "郑满意火锅",
     category: "美食探店",
-    description: "走遍武汉三镇，寻找最地道的热干面，解密芝麻酱的黄金比例。",
-    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Wuhan%20famous%20hot%20dry%20noodles%20reganmian%20close%20up%2C%20creamy%20sesame%20paste%20sauce%2C%20chopsticks%20lifting%20noodles%2C%20fresh%20green%20onions%2C%20sesame%20seeds%2C%20appetizing%2C%20wooden%20table%2C%20professional%20food%20photography%2C%20warm%20lighting%2C%20no%20people%2C%20delicious%2C%20high%20quality&image_size=square_hd",
+    description: "happy波带你郑满意火锅，到光谷不打卡光谷排队王等于白来！正宗火锅味道，人气爆棚！",
+    image: "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Popular%20Wuhan%20hot%20pot%20restaurant%20in%20Guanggu%2C%20spicy%20red%20broth%2C%20fresh%20ingredients%2C%20cozy%20restaurant%20atmosphere%2C%20delicious%20food%20spread%2C%20professional%20food%20photography%2C%20steaming%20hot%2C%20warm%20lighting%2C%20no%20people%2C%20high%20quality&image_size=square_hd",
+    link: "https://v.douyin.com/33Ohfc-g7fw/",
   },
   {
     id: 4,
