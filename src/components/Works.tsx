@@ -43,7 +43,7 @@ export default function Works() {
             </h2>
             <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-8"></div>
             <p className="text-gray-600 max-w-2xl mx-auto mb-10">
-              波哥用镜头记录武汉的烟火人间，用声音温暖每一个清晨，用真诚讲述这座城市的故事
+              Happy波用镜头记录武汉的烟火人间，用声音温暖每一个清晨，用真诚讲述这座城市的故事
             </p>
 
             <div className="flex flex-wrap justify-center gap-3">

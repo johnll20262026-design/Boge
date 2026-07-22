@@ -17,7 +17,7 @@ export default function About() {
               About Me
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">
-              关于<span className="text-gradient-gold">波哥</span>
+              关于<span className="text-gradient-gold">Happy波</span>
             </h2>
             <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full"></div>
           </div>
@@ -32,7 +32,7 @@ export default function About() {
                       <span className="text-gold-900 font-serif text-5xl font-bold">波</span>
                     </div>
                     <h3 className="font-serif text-3xl text-white font-bold mb-2">车站路波波</h3>
-                    <p className="text-gold-200 text-lg mb-6">波哥</p>
+                    <p className="text-gold-200 text-lg mb-6">Happy波</p>
                     <div className="flex items-center gap-3 text-gold-100 text-sm">
                       <span className="px-3 py-1 bg-gold-700/60 rounded-full">电台主持</span>
                       <span className="px-3 py-1 bg-gold-700/60 rounded-full">美食探店</span>

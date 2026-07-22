@@ -33,11 +33,11 @@ export default function Contact() {
               Contact
             </span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-4">
-              联系<span className="text-gradient-gold">波哥</span>
+              联系<span className="text-gradient-gold">Happy波</span>
             </h2>
             <div className="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              如果您是武汉本地商家，希望通过波哥的影响力推广品牌，欢迎直接联系
+              如果您是武汉本地商家，希望通过Happy波的影响力推广品牌，欢迎直接联系
             </p>
           </div>
 
@@ -51,7 +51,7 @@ export default function Contact() {
                   让我们一起讲好<span className="text-gold-200">武汉故事</span>
                 </h3>
                 <p className="text-white/80 text-center mb-10 max-w-xl mx-auto leading-relaxed">
-                  无论是新店开业、品牌推广、活动主持，还是美食探店，波哥都能用专业的媒体素养和本地影响力，为您的品牌赋能。
+                  无论是新店开业、品牌推广、活动主持，还是美食探店，Happy波都能用专业的媒体素养和本地影响力，为您的品牌赋能。
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-6">

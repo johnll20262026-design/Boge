@@ -22,7 +22,7 @@ export interface Stat {
 
 export const personalInfo = {
   name: "车站路波波",
-  nickname: "波哥",
+  nickname: "Happy波",
   wechatNickname: "happy波",
   wechatId: "hulunbo",
   phone: "13986012778",
@@ -30,7 +30,7 @@ export const personalInfo = {
   location: "湖北武汉",
   douyinId: "633592456",
   tagline: "一个每天给你不一样的心灵鸡汤和武汉的那些事",
-  bio: "一个跑来跑去的武汉演员，一个可以把小朋友黑哭的电视台主持人，一个可以把别个店吃垮的美食主持人。波哥，土生土长的武汉人，深耕媒体行业数十年，用亲切幽默的风格讲述武汉故事，用镜头记录地道武汉味。",
+  bio: "一个跑来跑去的武汉演员，一个可以把小朋友黑哭的电视台主持人，一个可以把别个店吃垮的美食主持人。Happy波，土生土长的武汉人，深耕媒体行业数十年，用亲切幽默的风格讲述武汉故事，用镜头记录地道武汉味。",
   experience: [
     "武汉电视台主持人",
     "武汉电台资深节目主持人",

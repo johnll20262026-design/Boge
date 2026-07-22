@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "首页", href: "#home", external: false },
-  { label: "关于波哥", href: "#about", external: false },
+  { label: "关于Happy波", href: "#about", external: false },
   { label: "精选作品", href: "#works", external: false },
   { label: "服务内容", href: "#services", external: false },
   { label: "联系合作", href: "#contact", external: false },
@@ -53,7 +53,7 @@ export default function Navbar() {
             isScrolled ? "text-gold-800" : "text-white"
           }`}
         >
-          波哥
+          Happy波
         </a>
 
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">

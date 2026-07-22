@@ -38,7 +38,7 @@ export default function Footer() {
               }}
               className="text-gold-200 hover:text-white transition-colors cursor-pointer"
             >
-              关于波哥
+              关于Happy波
             </a>
             <a
               href="#works"
