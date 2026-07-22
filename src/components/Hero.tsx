@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="mb-6 sm:mb-8 opacity-0 animate-fade-in-down" style={{ animationDelay: "200ms" }}>
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-gold-300/30 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 mb-4 sm:mb-6 max-w-full">
             <span className="w-2 h-2 bg-gold-400 rounded-full animate-pulse flex-shrink-0"></span>
-            <span className="text-gold-200 text-xs sm:text-sm whitespace-nowrap">抖音: {personalInfo.douyinId}</span>
+            <span className="text-gold-200 text-xs sm:text-sm whitespace-nowrap">抖音号: {personalInfo.douyinId}</span>
           </div>
         </div>
 
