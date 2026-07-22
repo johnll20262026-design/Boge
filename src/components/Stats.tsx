@@ -5,7 +5,7 @@ export default function Stats() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="py-20 bg-gradient-hero relative overflow-hidden">
+    <section className="py-14 sm:py-20 bg-gradient-hero relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -18,7 +18,7 @@ export default function Stats() {
           ref={ref}
           className={`scroll-reveal ${isVisible ? "revealed" : ""}`}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <StatItem
                 key={index}
@@ -59,11 +59,11 @@ function StatItem({
       className="text-center"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="font-serif text-5xl md:text-6xl font-black text-white mb-2">
+      <div className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-1 sm:mb-2">
         {count}
         <span className="text-gold-300">{suffix}</span>
       </div>
-      <div className="text-gold-200 text-lg font-medium">{label}</div>
+      <div className="text-gold-200 text-sm sm:text-base md:text-lg font-medium">{label}</div>
     </div>
   );
 }
