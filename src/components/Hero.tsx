@@ -12,22 +12,22 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16"
     >
       <div className="absolute inset-0 bg-gradient-hero"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gold-900/50"></div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto w-full">
-        <div className="mb-6 sm:mb-8 opacity-0 animate-fade-in-down" style={{ animationDelay: "200ms" }}>
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-gold-300/30 rounded-full px-4 sm:px-6 py-1.5 sm:py-2 mb-4 sm:mb-6 max-w-full">
+        <div className="mb-6 sm:mb-8 animate-fade-in-simple" style={{ animationDelay: "200ms", opacity: 0 }}>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-gold-300/30 rounded-full px-4 py-1.5 sm:px-5 sm:py-2 mb-4">
             <span className="w-2 h-2 bg-gold-400 rounded-full animate-pulse flex-shrink-0"></span>
-            <span className="text-gold-200 text-xs sm:text-sm whitespace-nowrap">抖音号: {personalInfo.douyinId}</span>
+            <span className="text-gold-200 text-xs sm:text-sm whitespace-nowrap">抖音号：{personalInfo.douyinId}</span>
           </div>
         </div>
 
         <h1
-          className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4 sm:mb-6 opacity-0-init animate-fade-in-up leading-tight"
-          style={{ animationDelay: "400ms", textShadow: "0 4px 30px rgba(0,0,0,0.3)" }}
+          className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4 sm:mb-6 animate-fade-in-up-simple leading-tight"
+          style={{ animationDelay: "400ms", textShadow: "0 4px 30px rgba(0,0,0,0.3)", opacity: 0 }}
         >
           {personalInfo.name}
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gold-200 mt-2">
@@ -35,23 +35,23 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-6 sm:mb-8 opacity-0-init animate-fade-in" style={{ animationDelay: "600ms" }}></div>
+        <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto mb-6 sm:mb-8 animate-fade-in-simple" style={{ animationDelay: "600ms", opacity: 0 }}></div>
 
         <p
-          className="text-base sm:text-xl md:text-2xl text-gold-100 mb-3 sm:mb-4 font-light opacity-0-init animate-fade-in-up px-2"
-          style={{ animationDelay: "800ms" }}
+          className="text-base sm:text-xl md:text-2xl text-gold-100 mb-3 sm:mb-4 font-light animate-fade-in-up-simple px-2"
+          style={{ animationDelay: "800ms", opacity: 0 }}
         >
           {personalInfo.title}
         </p>
 
         <p
-          className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 sm:mb-12 opacity-0-init animate-fade-in-up px-2"
-          style={{ animationDelay: "1000ms" }}
+          className="text-base sm:text-lg text-white/80 max-w-2xl mx-auto mb-8 sm:mb-12 animate-fade-in-up-simple px-2"
+          style={{ animationDelay: "1000ms", opacity: 0 }}
         >
           {personalInfo.tagline}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center opacity-0-init animate-fade-in-up px-4 sm:px-0" style={{ animationDelay: "1200ms" }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up-simple px-4 sm:px-0" style={{ animationDelay: "1200ms", opacity: 0 }}>
           <a
             href="#works"
             onClick={(e) => {
